@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>TIC TAC TOE</title>
+  <link rel="icon" type="image/x-icon" href="../assets/190322_game_tac_tic_toe_icon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../CSS/game.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<!-- body of game page -->
+
+<body onload="loadPage(); startGame(); ">
+  <!-- header section -->
+  <div class="header">
+    <span class="title">TIC TAC TOE</span>
+    <span><button class="fa fa-sign-out logout" style="font-size: 25px" onclick="Logout()">
+        LOGOUT
+      </button></span>
+  </div>
+
+  <div class="top-card">
+    <!-- selecting level section -->
+    Select level:
+    <select id="card" class="card top" onchange="cardFunction(this.value)">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+      <option value="game">Double Player</option>
+    </select>
+  </div>
+  <div class="top-card">
+  <!-- selecting history section -->
+  History:
+  <select id="Historycard" class="card bottom" onchange="gameFunction(this.value)">
+    <option selected>Select</option>
+  </select>
+  <button id="next" class="next" onclick="clickNext()">Next</button>
+</div>
+  <!-- points section -->
+  <div id="main" class="main">
+    <div class="gameBox">
+     <!-- Button to reset game -->
+     <button class="reset" onclick="startGame()">Start Game</button>
+    <!-- game section -->
+    <table id="myTable">
+      <tr>
+        <td class="cell" id="0"></td>
+        <td class="cell" id="1"></td>
+        <td class="cell" id="2"></td>
+      </tr>
+      <tr>
+        <td class="cell" id="3"></td>
+        <td class="cell" id="4"></td>
+        <td class="cell" id="5"></td>
+      </tr>
+      <tr>
+        <td class="cell" id="6"></td>
+        <td class="cell" id="7"></td>
+        <td class="cell" id="8"></td>
+      </tr>
+    </table>
+  </div>
+    <div id="points" class="points">
+      <div class="player">PLAYER 1 : <span id="player1"></span></div>
+      <div class="player">PLAYER 2 : <span id="player2"></span></div>
+      <div class="player">COMPUTER : <span id="computer"></span></div>
+      <div><button class="reset" onclick="clearResult()"> clear</button></div>
+    </div>
+    
+    <!-- result section -->
+    <div class="endgame">
+      <div class="text"></div>
+    </div>
+    <!-- selecting X or O section -->
+    <div class="selectSym">
+      <p id="selectPerson">Select symbol:</p>
+      <button onclick="selectSym('X')">X</button>
+      <button onclick="selectSym('O')">O</button>
+      <button class="close" onclick="closeData()">close</button>
+    </div>
+  </div>
+  <script type="module" src="../Javascript/script.js"></script>
+</body>
+
+</html>

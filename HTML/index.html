@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TIC TAC TOE</title>
+    <link rel="icon" type="image/x-icon" href="../assets/190322_game_tac_tic_toe_icon.ico">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/style.css'>
+</head>
+
+<body style="display:block;">
+    <!-- validation login page  -->
+    <div class="container">
+        <div class="main">
+            <!-- form for validation -->
+            <h2>Login</h2>
+            <form id="form_id" method="post" name="myform">
+                <label>Email :</label>
+                <input type="email" id="email" name="email" placeholder="abc@example.com" required>
+                <label>Password :</label>
+                <input type="password" name="password" id="password" required />
+                <span id="error"></span>
+                <input type="button" value="Sign In" id="submit" onclick="signinValidate()" />
+            </form><br>
+            <span> Need an Account : <b class="valid"><a id="mylink" href="./signup.html">Signup</a></b>
+        </div>
+    </div>
+    <script type="module" src="../Javascript/script.js"></script>
+</body>
+
+</html>
